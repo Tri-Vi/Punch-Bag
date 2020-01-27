@@ -1,5 +1,5 @@
 new Vue({
-  el: 'app',
+  el: '#app',
   data: {
 
   },
@@ -7,6 +7,6 @@ new Vue({
 
   },
   computed: {
-    
+
   }
 })
