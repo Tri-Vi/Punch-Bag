@@ -7,21 +7,17 @@
   <body>
     <div id="app">
       <!-- BAG IMAGE-->
-      <div id="bag">
-
-      </div>
+      <div id="bag" v-bind:class="{burst: ended}"></div>
 
       <!-- BAG HEALTH -->
       <div id="bag-health">
-        <div>
-
-        </div>
+        <div v-bind:style="{width: health + '%'}"></div>
       </div>
 
       <!-- GAME CONTROL -->
       <div id="controls">
-        <button v-on:click="punch">Punch</button>
-        <button v-on:restart="restart">Restart</button>
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restart">Restart</button>
       </div>
     </div>
     <script src="app.js"></script>
